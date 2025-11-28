@@ -17,12 +17,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var categoryPicker: UIPickerView!
     @IBOutlet weak var saveButton: UIButton!
     
+    
+
+    
     // MARK: - Data
     let categories = ["A", "B", "C", "D"]
     var selectedCategory: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("✅ View loaded")  // Перевіримо, що консоль працює
+    }
         
         // Picker setup
         categoryPicker.delegate = self
@@ -81,4 +86,4 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         print("Страховка: \(form.hasInsurance ? "Так" : "Ні")")
         print("Категорія: \(form.category ?? "-")")
     }
-}
+
